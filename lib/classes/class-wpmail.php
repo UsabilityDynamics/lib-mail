@@ -87,7 +87,7 @@ namespace UsabilityDynamics\Mail {
           'trigger_action' => 'wpiw_default_action',
           'data' => array(),
           'user' => false,
-          'subject' => __( 'No Subject', 'wpp' ),
+          'subject' => __( 'No Subject' ),
           'message' => '',
           'crm_log_message' => '',
         ) );
