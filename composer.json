@@ -24,6 +24,6 @@
   },
   "minimum-stability": "dev",
   "autoload": {
-    "classmap": "lib/classes"
+    "classmap": [ "lib/classes" ]
   }
 }
