@@ -75,7 +75,9 @@ namespace UsabilityDynamics\Mail {
       static public function replace_data( $str = '', $values = array(), $brackets = array( 'left' => '[', 'right' => ']' ) ) {
         $values       = (array) $values;
         $replacements = array_keys( $values );
-        array_walk( $replacements, create_function( '&$val', '$val = "' . $brackets[ 'left' ] . '".$val."' . $brackets[ 'right' ] . '";' ) );
+        array_walk( $replacements, function(&$val) use($brackets){
+          $val = $brackets[ 'left' ] . $val . $brackets[ 'right' ];
+        } );
         return str_replace( $replacements, array_values( $values ), $str );
       }
       
